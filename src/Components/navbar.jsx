@@ -1,4 +1,4 @@
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon, Code2 } from "lucide-react";
 import { useState } from "react";
 
 export function Navbar() {
@@ -22,11 +22,14 @@ setDarkMode((prev) => {
 return (
 <header className="fixed top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur dark:border-gray-800 dark:bg-gray-950/95">
     <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
-    <a
-        href="#home"
-        className="text-lg font-bold tracking-tight text-gray-900 dark:text-white sm:text-xl"
-    >
-        AHMED <span className="text-blue-500">TIJANI AKEEM</span>
+    <a href="#home" className="group flex items-center gap-2">
+        <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500 text-white shadow-sm transition duration-300 group-hover:scale-105 group-hover:bg-blue-600">
+        <Code2 size={22} strokeWidth={2.5} />
+        </div>
+
+        <span className="text-xl font-black tracking-tight text-gray-900 dark:text-white">
+        A<span className="text-blue-500">T</span>A
+        </span>
     </a>
 
     <div className="hidden items-center gap-8 md:flex">
@@ -75,14 +78,25 @@ return (
         </button>
     </div>
 
-    <button
+    <div className="flex items-center gap-2 md:hidden">
+        <button
+        type="button"
+        onClick={toggleTheme}
+        aria-label="Toggle theme"
+        className="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-300 text-gray-700 transition hover:border-blue-500 hover:text-blue-500 dark:border-gray-700 dark:text-gray-300"
+        >
+        {darkMode ? <Sun size={19} /> : <Moon size={19} />}
+        </button>
+
+        <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
-        className="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-300 text-gray-700 transition hover:border-blue-500 hover:text-blue-500 dark:border-gray-700 dark:text-gray-300 md:hidden"
-    >
+        className="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-300 text-gray-700 transition hover:border-blue-500 hover:text-blue-500 dark:border-gray-700 dark:text-gray-300"
+        >
         {isOpen ? <X size={22} /> : <Menu size={22} />}
-    </button>
+        </button>
+    </div>
     </nav>
 
     {isOpen && (
@@ -127,16 +141,6 @@ return (
         >
             Contact
         </a>
-
-        <button
-            type="button"
-            onClick={toggleTheme}
-            aria-label="Toggle theme"
-            className="flex w-fit items-center gap-3 rounded-lg border border-gray-300 px-4 py-2 text-gray-700 transition hover:border-blue-500 hover:text-blue-500 dark:border-gray-700 dark:text-gray-300"
-        >
-            {darkMode ? <Sun size={19} /> : <Moon size={19} />}
-            <span>{darkMode ? "Light Mode" : "Dark Mode"}</span>
-        </button>
         </div>
     </div>
     )}
