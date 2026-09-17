@@ -17,9 +17,9 @@ return (
 
     <main
     id="home"
-    className="mx-auto flex min-h-screen max-w-6xl items-center px-6"
+    className="mx-auto flex min-h-screen max-w-6xl items-center px-6 pt-20 md:pt-4"
     >
-    <section className="grid w-full items-center gap-12 md:grid-cols-2">
+    <section className="grid w-full items-center gap-12 md:grid-cols-2 md:gap-8 py-4 md:py-0">
         <div>
         <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-blue-500">
             Hello, I'm
