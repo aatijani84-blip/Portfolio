@@ -9,6 +9,8 @@ import { MdEmail } from "react-icons/md";
 import { Navbar } from "../Components/navbar";
 import { About } from "./about";
 import { Skills } from "./skills";
+import { Projects } from "./project";
+import { Contact } from "./contact";
 
 export function Home() {
 return (
@@ -59,7 +61,7 @@ return (
 
             <div className="mt-6 flex items-center gap-4">
             <a
-                href="https://github.com/yourusername"
+                href="https://github.com/aatijani84-blip"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -69,7 +71,7 @@ return (
             </a>
 
             <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://linkedin.com/in/akeem-a-tijani-4130aa36b?"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -130,6 +132,10 @@ return (
     <About />
 
     <Skills />
+
+    <Projects />
+
+    <Contact />
 </div>
 );
 }
