@@ -1,9 +1,13 @@
 import { Menu, X, Sun, Moon, Code2 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Navbar() {
 const [isOpen, setIsOpen] = useState(false);
 const [darkMode, setDarkMode] = useState(false);
+
+useEffect(() => {
+document.documentElement.classList.remove("dark");
+}, []);
 
 const toggleTheme = () => {
 setDarkMode((prev) => {
