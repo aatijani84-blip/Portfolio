@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export function Navbar() {
 const [isOpen, setIsOpen] = useState(false);
-const [darkMode, setDarkMode] = useState(true);
+const [darkMode, setDarkMode] = useState(false);
 
 const toggleTheme = () => {
 setDarkMode((prev) => {
